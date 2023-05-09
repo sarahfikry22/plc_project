@@ -1,0 +1,131 @@
+"name"='ss'
+"author"='Sarah&Shereen'
+"Case Sensitive" = 'False'
+"start symbol" = <program>
+                        
+!..............terminal................
+Id=[_]|{letter}{alphanumeric}*  
+Letter={letter}
+Digit=('+'|'-')?{digit}+('.'{digit}+)? (('e'|('-'|'+')?{digit}+)'^'('+'|'-'){digit}+('.'{digit}+)?)?
+     
+!...............Rules..................
+<program> ::=  Start <stmt_list>  End
+           
+<stmt_list> ::= <concept>
+             |<concept><stmt_list>
+             
+<concept> ::=<declaration> 
+           | <assign>
+            |<if_stmt>
+            |<for_stmt>
+            |<switch_statement>
+            |<while>
+            |<do-while>
+            |<function_call>
+            |<return_statement>
+            |<function>
+            
+!--------------declaration---------
+<declaration> ::= <type> <identifier> 
+<type> ::= 'int' | 'float' | 'double' | 'char' | 'bool' | 'string'
+<identifier> ::=Id
+
+
+
+<assign> ::= <id> '=' <expr>
+          
+<id> ::= Id
+      
+<expr> ::= <expr> '+' <term>
+        | <expr> '-' <term>
+        | <term>
+        
+
+
+
+<term> ::= <term> '*' <factor>
+        |<term> '/' <factor>
+        |<term> '%' <factor>
+        |<factor>
+
+
+
+<factor> ::= <factor> '**' <exp>
+          |<exp>
+          
+<exp> ::= '(' <expr> ')'
+       |<id>
+       |<digit>
+       
+<digit> ::= Digit
+       
+
+!.......if statment .....................
+
+<if_stmt>  ::=  if '(' <cond> ')'  Start  <stmt_list>  End
+            | if '(' <cond> ')'  Start  <stmt_list>  End else <stmt_list>
+
+<cond> ::= <expr> <op> <expr>
+        
+<op>  ::= '<' | '>' | '==' | '<>' | '!='
+       
+
+
+
+!........for loop ..........................
+
+<for_stmt> ::= for  '(' <type> <assign> ';' <cond> ';' <step> ')' '{' <stmt_list> '}'
+            
+
+!<data>  ::= int |float |double |string 
+         
+
+<step> ::= '--'<id>
+        |<id>'--'
+        |'++'<id>
+        |<id>'++'
+        |<assign>
+        
+
+  !-------------------switch---------------
+<switch_statement> ::= 'switch' '(' <identifier> ')' '{' <case_list> '}'
+<case_list> ::= <case_statement> | <case_list> <case_statement>
+<case_statement> ::= 'case' <value> ':' <stmt_list>'break' ';'
+<value> ::= Letter|<identifier>
+         
+
+
+!...........do-while.......................
+<do-while> ::= <type> <assign>  do   '{'<stmt_list><step>'}'  while '(' <cond> ')' ';'
+
+
+!...........while.......................
+<while> ::=<type> <assign>  while '(' <cond> ')' '{' <stmt_list> <step> '}'
+            
+
+!....................................function.......
+
+<function> ::= <function_header> '{' <stmt_list> '}'
+<function_header> ::= <return_type> <identifier> '(' <parameters> ')'
+<return_type> ::= 'void' | <type>
+<parameters> ::= <parameter> | <parameter> ',' <parameters>
+<parameter> ::= <type> <identifier>
+<function_call> ::= <identifier> '(' <arguments> ')'
+<arguments> ::= <expr> | <expr> ',' <arguments>
+<return_statement> ::= return <expr> ';'
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+       
+

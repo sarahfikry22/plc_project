@@ -1,0 +1,14 @@
+D:\study 3rd t2\PLC\project\testtttttttt\testtttttttt\bin\Debug\testtttttttt.exe.config
+D:\study 3rd t2\PLC\project\testtttttttt\testtttttttt\bin\Debug\testtttttttt.exe
+D:\study 3rd t2\PLC\project\testtttttttt\testtttttttt\bin\Debug\testtttttttt.pdb
+D:\study 3rd t2\PLC\project\testtttttttt\testtttttttt\obj\Debug\testtttttttt.csproj.AssemblyReference.cache
+D:\study 3rd t2\PLC\project\testtttttttt\testtttttttt\obj\Debug\testtttttttt.csproj.SuggestedBindingRedirects.cache
+D:\study 3rd t2\PLC\project\testtttttttt\testtttttttt\obj\Debug\testtttttttt.Properties.Resources.resources
+D:\study 3rd t2\PLC\project\testtttttttt\testtttttttt\obj\Debug\testtttttttt.csproj.GenerateResource.cache
+D:\study 3rd t2\PLC\project\testtttttttt\testtttttttt\obj\Debug\testtttttttt.csproj.CoreCompileInputs.cache
+D:\study 3rd t2\PLC\project\testtttttttt\testtttttttt\obj\Debug\testtttttttt.exe
+D:\study 3rd t2\PLC\project\testtttttttt\testtttttttt\obj\Debug\testtttttttt.pdb
+D:\study 3rd t2\PLC\project\testtttttttt\testtttttttt\bin\Debug\CalithaLib.dll
+D:\study 3rd t2\PLC\project\testtttttttt\testtttttttt\bin\Debug\GoldParserEngine.dll
+D:\study 3rd t2\PLC\project\testtttttttt\testtttttttt\obj\Debug\testtttttttt.Form1.resources
+D:\study 3rd t2\PLC\project\testtttttttt\testtttttttt\obj\Debug\testtttttttt.csproj.CopyComplete
